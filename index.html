@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Музей Морского Мусора | Онежское Поморье</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Nunito:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        crossorigin="anonymous">
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <nav class="navbar" id="navbar">
+            <div class="logo">
+                <i class="fas fa-water"></i> ОНЕЖСКОЕ ПОМОРЬЕ
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">О Проекте</a></li>
+                <li><a href="#walkthrough">Галерея</a></li>
+                <li><a href="#problem">Проблема</a></li>
+                <li><a href="#exhibits">Экспонаты</a></li>
+                <li><a href="#game">Интерактив</a></li>
+            </ul>
+        </nav>
+        <div class="hero-content">
+            <h1>Виртуальный Музей<br>Морского Мусора</h1>
+            <p>Национальный парк «Онежское Поморье» объединяет морскую и таёжную природу. Но даже здесь, где медведя
+                встретить легче, чем человека, берега Белого моря страдают от мусора.</p>
+            <a href="#about" class="btn-primary">Узнать больше</a>
+        </div>
+        <div class="wave" id="wave1"></div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">О Проекте</h2>
+            <div class="about-content animate-on-scroll">
+                <div class="about-text">
+                    <p>Проект создан в рамках межрегионального конкурса «Арктический Хакатон 2026». Наша цель — повысить
+                        осведомленность жителей региона и школьников Архангельской области о проблеме антропогенного
+                        загрязнения Белого моря.</p>
+                    <p>Белое море — самое маленькое в Северном ледовитом океане. Сюда мусор приносят реки, в частности
+                        крупнейшая река Северная Двина, собирающая отходы от деревень и агломерации «Архангельск —
+                        Новодвинск — Северодвинск».</p>
+                    <blockquote class="pull-quote">«На его берегу, где можно чаще встретить медведя, чем человека, с
+                        каждым годом становится всё больше мусора.»</blockquote>
+                </div>
+                <div class="about-image">
+                    <img src="map.png" alt="Карта Северной Двины и Белого моря" class="map-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section (Walkthrough) -->
+    <section id="walkthrough" class="photo-gallery-section">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Прогулка по Онежскому Поморью</h2>
+            <p class="section-subtitle animate-on-scroll">Национальный парк сохраняет уникальную первозданную природу
+                Белого моря — густые таежные леса, бескрайние песчаные косы и традиционные рыбацкие тони.</p>
+
+            <div class="slider-container animate-on-scroll">
+                <div class="slider-track" id="photoSlider">
+                    <div class="slide"><img src="gallery/1.jpg" alt="Онежский полуостров 1"></div>
+                    <div class="slide"><img src="gallery/2.jpg" alt="Онежский полуостров 2"></div>
+                    <div class="slide"><img src="gallery/3.jpg" alt="Онежский полуостров 3"></div>
+                    <div class="slide"><img src="gallery/4.jpg" alt="Побережье Белого моря"></div>
+                    <div class="slide"><img src="gallery/5.jpg" alt="Деревянная архитектура побережья"></div>
+                    <div class="slide"><img src="gallery/6.jpg" alt="Вид на залив"></div>
+                    <div class="slide"><img src="gallery/7.jpg" alt="Деревня Яреньга"></div>
+                    <div class="slide"><img src="gallery/8.jpg" alt="Рыбацкие лодки"></div>
+                    <div class="slide"><img src="gallery/9.jpg" alt="Таежный лес"></div>
+                    <div class="slide"><img src="gallery/10.jpg" alt="Осеннее утро на море"></div>
+                </div>
+
+                <button class="slider-nav slider-prev" onclick="moveSlider(-1)"
+                    aria-label="Предыдущее фото">&#10094;</button>
+                <button class="slider-nav slider-next" onclick="moveSlider(1)"
+                    aria-label="Следующее фото">&#10095;</button>
+
+                <div class="slider-dots" id="sliderDots"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Statistics Section -->
+    <section id="problem" class="stats-section">
+        <div class="container">
+            <h2 class="section-title text-white">Масштаб Проблемы</h2>
+            <div class="stats-grid">
+                <div class="stat-card animate-on-scroll">
+                    <div class="stat-icon"><i class="fas fa-bottle-water"></i></div>
+                    <div class="stat-label">Пластик</div>
+                    <div class="stat-number">#1</div>
+                    <div class="stat-desc">Самый частый гость на побережье Белого моря</div>
+                </div>
+                <div class="stat-card animate-on-scroll">
+                    <div class="stat-icon"><i class="fas fa-water"></i></div>
+                    <div class="stat-label">Течения</div>
+                    <div class="stat-number">Сносят</div>
+                    <div class="stat-desc">Мусор и микропластик переносятся по всему Онежскому полуострову</div>
+                </div>
+                <div class="stat-card animate-on-scroll">
+                    <div class="stat-icon"><i class="fas fa-fish-fins"></i></div>
+                    <div class="stat-label">Снасти</div>
+                    <div class="stat-number">Ловушки</div>
+                    <div class="stat-desc">Сети и няса угрожают морским млекопитающим и птицам</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Exhibits Section -->
+    <section id="exhibits" class="gallery-section">
+        <div class="container">
+            <h2 class="section-title">Виртуальные Экспонаты</h2>
+            <p class="section-subtitle">Исследование морфологического состава мусора на побережье Белого моря</p>
+
+            <div class="exhibit-grid">
+                <!-- Exhibit 1 -->
+                <div class="exhibit-card animate-on-scroll" onclick="openExhibitModal(1)" role="button" tabindex="0">
+                    <span class="exhibit-badge">#1</span>
+                    <div class="exhibit-img" style="background-image: url('ex_bottle.png');"></div>
+                    <div class="exhibit-info">
+                        <h3>Пластиковые бутылки</h3>
+                        <p class="material">Материал: ПЭТ (Полиэтилентерефталат)</p>
+                        <p class="reason">Вероятная причина: Выброшены на берег отдыхающими или принесены рекой Северная
+                            Двина из населенных пунктов.</p>
+                    </div>
+                </div>
+
+                <!-- Exhibit 2 -->
+                <div class="exhibit-card animate-on-scroll" onclick="openExhibitModal(2)" role="button" tabindex="0">
+                    <span class="exhibit-badge">#2</span>
+                    <div class="exhibit-img" style="background-image: url('ex_net.png');"></div>
+                    <div class="exhibit-info">
+                        <h3>Рыболовные снасти</h3>
+                        <p class="material">Материал: Нейлон, капрон</p>
+                        <p class="reason">Вероятная причина: Утеряны рыбаками во время промысла. Представляют особую
+                            опасность как «сети-призраки» для морских млекопитающих.</p>
+                    </div>
+                </div>
+
+                <!-- Exhibit 3 -->
+                <div class="exhibit-card animate-on-scroll" onclick="openExhibitModal(3)" role="button" tabindex="0">
+                    <span class="exhibit-badge">#3</span>
+                    <div class="exhibit-img" style="background-image: url('ex_boot.png');"></div>
+                    <div class="exhibit-info">
+                        <h3>Резиновая обувь</h3>
+                        <p class="material">Материал: Резина, полиуретан</p>
+                        <p class="reason">Вероятная причина: Были оставлены на берегу во время купания или смыты
+                            приливом с берега рыбацких поселков.</p>
+                    </div>
+                </div>
+
+                <!-- Exhibit 4 -->
+                <div class="exhibit-card animate-on-scroll" onclick="openExhibitModal(4)" role="button" tabindex="0">
+                    <span class="exhibit-badge">#4</span>
+                    <div class="exhibit-img" style="background-image: url('ex_probe.png');"></div>
+                    <div class="exhibit-info">
+                        <h3>Метеорологический зонд</h3>
+                        <p class="material">Материал: Пластик, латекс, микросхемы</p>
+                        <p class="reason">Вероятная причина: Был запущен в атмосферу для исследований, после чего упал и
+                            попал в море в виде остаточного мусора.</p>
+                    </div>
+                </div>
+
+                <!-- Exhibit 5 -->
+                <div class="exhibit-card animate-on-scroll" onclick="openExhibitModal(5)" role="button" tabindex="0">
+                    <span class="exhibit-badge">#5</span>
+                    <div class="exhibit-img" style="background-image: url('ex_buoy.png');"></div>
+                    <div class="exhibit-info">
+                        <h3>Пенопластовый буй</h3>
+                        <p class="material">Материал: Вспененный полистирол (EPS)</p>
+                        <p class="reason">Вероятная причина: Использовался рыбаками для разметки снастей. При разрушении
+                            распадается на тысячи гранул микропластика, которые поглощают морские организмы.</p>
+                    </div>
+                </div>
+
+                <!-- Exhibit 6 -->
+                <div class="exhibit-card animate-on-scroll" onclick="openExhibitModal(6)" role="button" tabindex="0">
+                    <span class="exhibit-badge">#6</span>
+                    <div class="exhibit-img" style="background-image: url('ex_canister.png');"></div>
+                    <div class="exhibit-info">
+                        <h3>Канистра горючего</h3>
+                        <p class="material">Материал: Полиэтилен высокой плотности (HDPE)</p>
+                        <p class="reason">Вероятная причина: По всей видимости, оставлена рыбаками или туристами и
+                            смыта в море во время прилива. Остатки топлива внутри загрязняют воду и береговую линию.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EcoSub Game Section -->
+    <section id="game" class="game-section">
+        <div class="container">
+            <h2 class="section-title">EcoSub: Очистка Океана</h2>
+            <p class="section-subtitle">Управляй субмариной, собирай мусор крюком и спасай Белое море от загрязнения!
+                Избегай опасных глубин и мусорных вихрей.</p>
+
+            <div class="ecosub-wrapper">
+                <div class="ecosub-controls">
+                    <span>⬆⬇⬅➡ — движение</span>
+                    <span>ПРОБЕЛ — крюк</span>
+                    <button class="btn-fullscreen" id="btn-fullscreen" onclick="toggleFullscreen()">⛶ На весь
+                        экран</button>
+                </div>
+                <div class="ecosub-frame" id="ecosub-frame">
+                    <canvas id="gameCanvas"></canvas>
+                    <canvas id="minimap" width="120" height="80"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-water"></i> Арктический Хакатон 2026
+            </div>
+            <div class="footer-links">
+                <p>Трек: «Земля». Проектное решение для ФГБУ «Национальный парк "Кенозерский"»</p>
+                <a href="https://onpomorie.ru/" target="_blank">onpomorie.ru</a>
+            </div>
+            <button class="btn-feedback-footer" id="btnFeedbackFooter" onclick="openFeedbackModal()">✉ Обратная
+                связь</button>
+        </div>
+    </footer>
+
+    <!-- Exhibit Modal -->
+    <div class="exhibit-modal-overlay" id="exhibitOverlay" onclick="closeExhibitModal(event)">
+        <div class="exhibit-modal" role="dialog" aria-modal="true" aria-labelledby="exhibitModalTitle">
+            <button class="exhibit-modal-close" onclick="closeExhibitModal()" aria-label="Закрыть">×</button>
+
+            <!-- Prev / Next -->
+            <button class="exhibit-modal-nav exhibit-modal-prev" id="exhibitPrev" onclick="navigateExhibit(-1)"
+                aria-label="Предыдущий">&#10094;</button>
+            <button class="exhibit-modal-nav exhibit-modal-next" id="exhibitNext" onclick="navigateExhibit(1)"
+                aria-label="Следующий">&#10095;</button>
+
+            <div class="exhibit-modal-hero" id="exhibitModalHero">
+                <span class="exhibit-modal-badge" id="exhibitModalBadge"></span>
+            </div>
+            <div class="exhibit-modal-body">
+                <h2 class="exhibit-modal-title" id="exhibitModalTitle"></h2>
+                <div class="exhibit-modal-tags" id="exhibitModalTags"></div>
+                <div class="exhibit-modal-section">
+                    <span class="exhibit-modal-label"><i class="fas fa-layer-group"></i> Материал</span>
+                    <p id="exhibitModalMaterial"></p>
+                </div>
+                <div class="exhibit-modal-section">
+                    <span class="exhibit-modal-label"><i class="fas fa-route"></i> Путь загрязнения</span>
+                    <p id="exhibitModalReason"></p>
+                </div>
+                <div class="exhibit-modal-section">
+                    <span class="exhibit-modal-label"><i class="fas fa-skull-crossbones"></i> Опасность</span>
+                    <div class="exhibit-danger-bar" id="exhibitDangerBar"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Feedback Modal -->
+    <div class="feedback-modal-overlay" id="feedbackOverlay" onclick="closeFeedbackModal(event)">
+        <div class="feedback-modal" role="dialog" aria-modal="true" aria-labelledby="feedbackTitle">
+            <button class="feedback-close" onclick="closeFeedbackModal()" aria-label="Закрыть">×</button>
+            <div class="feedback-header">
+                <div class="feedback-icon"><i class="fas fa-envelope"></i></div>
+                <h2 id="feedbackTitle">Обратная связь</h2>
+                <p>Поделитесь впечатлениями о проекте — это поможет нам стать лучше</p>
+            </div>
+            <form class="feedback-form" id="feedbackForm" onsubmit="submitFeedback(event)">
+                <div class="form-group">
+                    <label for="fbName"><i class="fas fa-user"></i> Ваше имя</label>
+                    <div class="input-icon-wrap">
+                        <i class="fas fa-user input-icon"></i>
+                        <input type="text" id="fbName" placeholder="Иван Петров" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="fbEmail"><i class="fas fa-envelope"></i> E-mail</label>
+                    <div class="input-icon-wrap">
+                        <i class="fas fa-at input-icon"></i>
+                        <input type="email" id="fbEmail" placeholder="example@mail.ru" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-star"></i> Оценка проекта</label>
+                    <div class="star-rating" id="starRating">
+                        <span data-val="1">★</span>
+                        <span data-val="2">★</span>
+                        <span data-val="3">★</span>
+                        <span data-val="4">★</span>
+                        <span data-val="5">★</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="fbMsg"><i class="fas fa-comment-dots"></i> Сообщение</label>
+                    <div class="input-icon-wrap input-icon-wrap--textarea">
+                        <i class="fas fa-comment-dots input-icon input-icon--top"></i>
+                        <textarea id="fbMsg" rows="4"
+                            placeholder="Напишите ваши впечатления, предложения или вопросы..." required></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="btn-feedback-submit"><i class="fas fa-paper-plane"></i> Отправить</button>
+            </form>
+            <div class="feedback-success" id="feedbackSuccess">
+                <div class="success-icon"><i class="fas fa-check"></i></div>
+                <h3>Спасибо за отзыв!</h3>
+                <p>Мы получили ваше сообщение и обязательно его изучим.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <a href="#home" class="scroll-to-top" id="scrollTopBtn"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- Floating Feedback Button -->
+    <button class="floating-feedback" id="floatingFeedback" onclick="openFeedbackModal()" title="Обратная связь"><i
+            class="fas fa-envelope"></i></button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
